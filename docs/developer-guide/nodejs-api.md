@@ -144,6 +144,15 @@ console.log(code.text);     // "var foo = bar;"
 
 In this way, you can retrieve the text and AST used for the last run of `linter.verify()`.
 
+## Linter
+
+This API can be used to have an immutable linter object to lint your code. `linter` API above is an instance of this class. For all the functionality, please refer to `linter` docs [above](#linter).
+
+```js
+var Linter = require("eslint").Linter;
+var linter = new Linter();
+```
+
 ## CLIEngine
 
 The primary Node.js API is `CLIEngine`, which is the underlying utility that runs the ESLint command line interface. This object will read the filesystem for configuration and file information but will not output any results. Instead, it allows you direct access to the important information so you can deal with the output yourself.
